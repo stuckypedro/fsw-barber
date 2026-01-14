@@ -1,4 +1,4 @@
-import Image from "next/image"
+import { Button } from "./_components/ui/button"
 
 export default function Home() {
   return (
@@ -8,6 +8,11 @@ export default function Home() {
           <h1 className="text-4xl font-bold text-black">HP</h1>
         </div>
         <h1 className="text-3xl font-bold text-yellow-300">HOME PAGE</h1>
+      </div>
+      <div className="flex items-center justify-center">
+        <Button className="bg-yellow-300 p-3 font-bold text-black hover:bg-yellow-400">
+          Começar
+        </Button>
       </div>
     </div>
   )
