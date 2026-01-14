@@ -1,11 +1,11 @@
 import { PrismaPg } from "@prisma/adapter-pg";
+import { PrismaClient } from "@/generated/prisma/client";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL });
-
-const { PrismaClient } = require("@prisma/client");
-
-const prisma = new PrismaClient(adapter);
-
+const prisma = new PrismaClient({ adapter });
 async function seedDatabase() {
   try {
     const images = [
